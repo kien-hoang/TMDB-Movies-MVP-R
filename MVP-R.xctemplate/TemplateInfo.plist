@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>File</string>
+	<key>Description</key>
+	<string>Create a new MVP Module</string>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Description</key>
+			<string>The name of the module to create.</string>
+			<key>Identifier</key>
+			<string>ModuleName</string>
+			<key>Name</key>
+			<string>New MVP Module name:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_ModuleName:identifier___</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>viewClass</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Subclass of:</string>
+			<key>Description</key>
+			<string>What class view should subclass</string>
+			<key>Type</key>
+			<string>class</string>
+			<key>Default</key>
+			<string>UIViewController</string>
+			<key>Values</key>
+			<array>
+				<string>UIViewController</string>
+			</array>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>Routable</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Also create Router class</string>
+			<key>Description</key>
+			<string>Choose whether the module needs router</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>true</string>
+		</dict>
+	</array>
+	<key>Summary</key>
+	<string>Create MVP Module Template</string>
+</dict>
+</plist>

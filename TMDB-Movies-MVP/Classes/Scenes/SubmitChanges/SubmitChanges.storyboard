@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Submit Changes View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SubmitChangesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SubmitChangesViewController" customModule="TMDB_Movies_MVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdA-om-bCA">
+                                <rect key="frame" x="16" y="148" width="382" height="614"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lPh-Sl-Cjz">
+                                        <rect key="frame" x="12" y="12" width="362" height="594"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit Changes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7j-BH-fHQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="362" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-41-4lF">
+                                                <rect key="frame" x="0.0" y="29.5" width="362" height="511.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hf7-HF-STH">
+                                                <rect key="frame" x="0.0" y="549" width="362" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-ob-HbT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="45"/>
+                                                        <color key="backgroundColor" name="color_4231c8"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="vqH-Fv-IpE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="tintColor" name="color_ffffff"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="CANCEL">
+                                                            <color key="titleColor" name="color_ffffff"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cancelButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hUg-pq-Lv4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evN-Ch-FY2">
+                                                        <rect key="frame" x="191" y="0.0" width="171" height="45"/>
+                                                        <color key="backgroundColor" name="color_4231c8"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="Xft-BT-pTi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="tintColor" name="color_ffffff"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="SUBMIT">
+                                                            <color key="titleColor" name="color_ffffff"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bp-75-K93"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="3GZ-ci-CWU"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="color_ffffff"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lPh-Sl-Cjz" secondAttribute="trailing" constant="8" id="3hX-vZ-YB6"/>
+                                    <constraint firstItem="lPh-Sl-Cjz" firstAttribute="top" secondItem="pdA-om-bCA" secondAttribute="top" constant="12" id="cyg-uf-XKp"/>
+                                    <constraint firstItem="lPh-Sl-Cjz" firstAttribute="leading" secondItem="pdA-om-bCA" secondAttribute="leading" constant="12" id="quT-aC-9Y3"/>
+                                    <constraint firstAttribute="bottom" secondItem="lPh-Sl-Cjz" secondAttribute="bottom" constant="8" id="vKb-Gb-L47"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="color_000000_50"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pdA-om-bCA" secondAttribute="bottom" constant="100" id="7Jt-Pg-nI2"/>
+                            <constraint firstItem="pdA-om-bCA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="FFb-SV-ew8"/>
+                            <constraint firstItem="pdA-om-bCA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YUd-8s-1n6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pdA-om-bCA" secondAttribute="trailing" constant="16" id="d1p-Rn-fGy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bYg-41-4lF" id="gXw-J0-4ZY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="63"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="color_000000_50">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_4231c8">
+            <color red="0.25882352941176473" green="0.19215686274509805" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_ffffff">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  TMDB-Movies-MVP
+
+  Created by Bradley Hoang on 30/12/2022.
+  
+*/
+
+"network_error" = "Please check your network.";
+
+"common_ok" = "OK";
+"common_submit" = "SUBMIT";
+"common_cancel" = "CANCEL";
+"common_update" = "UPDATE";
