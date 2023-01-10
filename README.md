@@ -14,7 +14,7 @@ Liked some of my work? Buy me a coffee (or more likely a beer)
 
 ## Application
 | Upcoming Movies | Edit Movie  | Update Movie  |  Submit Changes  |
-| ------------ | ------------ | ------------ |
+| ------------ | ------------ | ------------ | ------------ |
 | <img src="images/app-1.png" height="480"> | <img src="images/app-2.png" height="480"> | <img src="images/app-3.png" height="480"> | <img src="images/app-4.png" height="480"> |
 
 ## Model View Presenter - Router (MVP-R) :heart:
