@@ -107,6 +107,12 @@
 		134E0216296D6F2E00FE7D6E /* SubmitChangesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E020D296D6F2E00FE7D6E /* SubmitChangesRouter.swift */; };
 		134E0217296D6F2E00FE7D6E /* SubmitChangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E020E296D6F2E00FE7D6E /* SubmitChangesViewController.swift */; };
 		134E0218296D6F2E00FE7D6E /* SubmitChangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E020E296D6F2E00FE7D6E /* SubmitChangesViewController.swift */; };
+		134E0227296DA8C900FE7D6E /* UpcomingMoviesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E0226296DA8C900FE7D6E /* UpcomingMoviesBuilder.swift */; };
+		134E0228296DA8C900FE7D6E /* UpcomingMoviesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E0226296DA8C900FE7D6E /* UpcomingMoviesBuilder.swift */; };
+		134E022A296DAB6E00FE7D6E /* EditMovieBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E0229296DAB6E00FE7D6E /* EditMovieBuilder.swift */; };
+		134E022B296DAB6E00FE7D6E /* EditMovieBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E0229296DAB6E00FE7D6E /* EditMovieBuilder.swift */; };
+		134E022D296DAE3100FE7D6E /* SubmitChangesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E022C296DAE3100FE7D6E /* SubmitChangesBuilder.swift */; };
+		134E022E296DAE3100FE7D6E /* SubmitChangesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E022C296DAE3100FE7D6E /* SubmitChangesBuilder.swift */; };
 		41D1C176D7339BF5280F7AD6 /* Pods_TMDB_Movies_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8F3EBC39A92B2DFEF020C4 /* Pods_TMDB_Movies_MVP.framework */; };
 		6E5E332D6A75ECC8E75ECFAC /* Pods_TMDB_Movies_MVP_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652BF97D57B3421AC009142B /* Pods_TMDB_Movies_MVP_dev.framework */; };
 /* End PBXBuildFile section */
@@ -164,6 +170,9 @@
 		134E020C296D6F2E00FE7D6E /* SubmitChangesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitChangesPresenter.swift; sourceTree = "<group>"; };
 		134E020D296D6F2E00FE7D6E /* SubmitChangesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitChangesRouter.swift; sourceTree = "<group>"; };
 		134E020E296D6F2E00FE7D6E /* SubmitChangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitChangesViewController.swift; sourceTree = "<group>"; };
+		134E0226296DA8C900FE7D6E /* UpcomingMoviesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesBuilder.swift; sourceTree = "<group>"; };
+		134E0229296DAB6E00FE7D6E /* EditMovieBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMovieBuilder.swift; sourceTree = "<group>"; };
+		134E022C296DAE3100FE7D6E /* SubmitChangesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitChangesBuilder.swift; sourceTree = "<group>"; };
 		137B268D295DC7BB00F496FC /* TMDB-Movies-MVP-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDB-Movies-MVP-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		139AB272295C6BD000ADBDDD /* TMDB-Movies-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDB-Movies-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21880E4AB81B2C56E7790170 /* Pods-teko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teko.debug.xcconfig"; path = "Target Support Files/Pods-teko/Pods-teko.debug.xcconfig"; sourceTree = "<group>"; };
@@ -395,9 +404,10 @@
 				134AEE0D296B208C0069A304 /* Cell */,
 				134AEE0C296B208C0069A304 /* UpcomingMovies.storyboard */,
 				134AEE44296B21900069A304 /* UpcomingMoviesContract.swift */,
-				134AEE6D296B301C0069A304 /* UpcomingMoviesRouter.swift */,
 				134AEE13296B208C0069A304 /* UpcomingMoviesPresenter.swift */,
+				134AEE6D296B301C0069A304 /* UpcomingMoviesRouter.swift */,
 				134AEE15296B208C0069A304 /* UpcomingMoviesViewController.swift */,
+				134E0226296DA8C900FE7D6E /* UpcomingMoviesBuilder.swift */,
 			);
 			path = UpcomingMovies;
 			sourceTree = "<group>";
@@ -424,9 +434,10 @@
 			children = (
 				134AEE57296B2AD30069A304 /* EditMovie.storyboard */,
 				134AEE6A296B2B160069A304 /* EditMovieContract.swift */,
-				134AEE70296C50A20069A304 /* EditMovieRouter.swift */,
 				134AEE58296B2AD30069A304 /* EditMoviePresenter.swift */,
+				134AEE70296C50A20069A304 /* EditMovieRouter.swift */,
 				134AEE52296B2AD30069A304 /* EditMovieViewController.swift */,
+				134E0229296DAB6E00FE7D6E /* EditMovieBuilder.swift */,
 			);
 			path = EditMovie;
 			sourceTree = "<group>";
@@ -439,6 +450,7 @@
 				134E020C296D6F2E00FE7D6E /* SubmitChangesPresenter.swift */,
 				134E020D296D6F2E00FE7D6E /* SubmitChangesRouter.swift */,
 				134E020E296D6F2E00FE7D6E /* SubmitChangesViewController.swift */,
+				134E022C296DAE3100FE7D6E /* SubmitChangesBuilder.swift */,
 			);
 			path = SubmitChanges;
 			sourceTree = "<group>";
@@ -723,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				134AEE02296B08EE0069A304 /* MovieModel.swift in Sources */,
+				134E022D296DAE3100FE7D6E /* SubmitChangesBuilder.swift in Sources */,
 				132CDA41296B039200D4E434 /* LocalizableConstant.swift in Sources */,
 				134AEE66296B2AD30069A304 /* EditMoviePresenter.swift in Sources */,
 				134AEDFB296B086A0069A304 /* TMDBNetworkingConfiguration.swift in Sources */,
@@ -732,12 +745,14 @@
 				134AEE71296C50A20069A304 /* EditMovieRouter.swift in Sources */,
 				132CDA35296B039200D4E434 /* String+Extensions.swift in Sources */,
 				132CDA33296B039200D4E434 /* UIView+Extensions.swift in Sources */,
+				134E0227296DA8C900FE7D6E /* UpcomingMoviesBuilder.swift in Sources */,
 				134AEE2C296B208C0069A304 /* UpcomingMoviesPresenter.swift in Sources */,
 				134E0217296D6F2E00FE7D6E /* SubmitChangesViewController.swift in Sources */,
 				134E0211296D6F2E00FE7D6E /* SubmitChangesContract.swift in Sources */,
 				132CDA4F296B039200D4E434 /* Environment.swift in Sources */,
 				134AEE4C296B262B0069A304 /* UIImageView+Kingfisher.swift in Sources */,
 				134AEDFE296B08B20069A304 /* MovieAPI.swift in Sources */,
+				134E022A296DAB6E00FE7D6E /* EditMovieBuilder.swift in Sources */,
 				132CDA43296B039200D4E434 /* AssetConstant.swift in Sources */,
 				134E0213296D6F2E00FE7D6E /* SubmitChangesPresenter.swift in Sources */,
 				134AEE6B296B2B160069A304 /* EditMovieContract.swift in Sources */,
@@ -771,6 +786,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				134AEE03296B08EE0069A304 /* MovieModel.swift in Sources */,
+				134E022E296DAE3100FE7D6E /* SubmitChangesBuilder.swift in Sources */,
 				132CDA42296B039200D4E434 /* LocalizableConstant.swift in Sources */,
 				134AEE67296B2AD30069A304 /* EditMoviePresenter.swift in Sources */,
 				134AEDFC296B086A0069A304 /* TMDBNetworkingConfiguration.swift in Sources */,
@@ -780,12 +796,14 @@
 				134AEE72296C50A20069A304 /* EditMovieRouter.swift in Sources */,
 				132CDA36296B039200D4E434 /* String+Extensions.swift in Sources */,
 				132CDA34296B039200D4E434 /* UIView+Extensions.swift in Sources */,
+				134E0228296DA8C900FE7D6E /* UpcomingMoviesBuilder.swift in Sources */,
 				134AEE2D296B208C0069A304 /* UpcomingMoviesPresenter.swift in Sources */,
 				134E0218296D6F2E00FE7D6E /* SubmitChangesViewController.swift in Sources */,
 				134E0212296D6F2E00FE7D6E /* SubmitChangesContract.swift in Sources */,
 				132CDA50296B039200D4E434 /* Environment.swift in Sources */,
 				134AEE4D296B262B0069A304 /* UIImageView+Kingfisher.swift in Sources */,
 				134AEDFF296B08B20069A304 /* MovieAPI.swift in Sources */,
+				134E022B296DAB6E00FE7D6E /* EditMovieBuilder.swift in Sources */,
 				132CDA44296B039200D4E434 /* AssetConstant.swift in Sources */,
 				134E0214296D6F2E00FE7D6E /* SubmitChangesPresenter.swift in Sources */,
 				134AEE6C296B2B160069A304 /* EditMovieContract.swift in Sources */,

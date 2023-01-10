@@ -21,26 +21,6 @@ final class SubmitChangesRouter {
     }
 }
 
-// MARK: - Public
-
-extension SubmitChangesRouter {
-    func show(with viewModels: [UpcomingMovieViewModel]) {
-        let vc = createModule(with: viewModels)
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overFullScreen
-        view?.present(vc, animated: true)
-    }
-    
-    func showAsRootView(with viewModels: [UpcomingMovieViewModel]) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-              let window = appDelegate.window else { return }
-        
-        let vc = createModule(with: viewModels)
-        window.rootViewController = UINavigationController(rootViewController: vc)
-        window.makeKeyAndVisible()
-    }
-}
-
 // MARK: - PresenterToRouter
 
 extension SubmitChangesRouter: PresenterToRouterSubmitChangesProtocol {
@@ -49,23 +29,16 @@ extension SubmitChangesRouter: PresenterToRouterSubmitChangesProtocol {
     }
     
     func navigateToUpcomingMovies() {
-        UpcomingMoviesRouter(view: view).showAsRootView()
-    }
-}
-
-// MARK: - Private
-
-private extension SubmitChangesRouter {
-    func createModule(with viewModels: [UpcomingMovieViewModel]) -> UIViewController {
-        let viewController = SubmitChangesViewController.initViewController()
-        let presenter = SubmitChangesPresenter()
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+              let window = appDelegate.window else { return }
         
-        viewController.presenter = presenter
-        
-        presenter.view = viewController
-        presenter.router = self
-        presenter.movies = viewModels
-        
-        return viewController
+        let vc = UpcomingMoviesBuilder.build()
+        UIView.transition(with: window,
+                          duration: 0.5,
+                          options: .transitionFlipFromRight) {
+            window.rootViewController = UINavigationController(rootViewController: vc)
+            
+        }
+        window.makeKeyAndVisible()
     }
 }

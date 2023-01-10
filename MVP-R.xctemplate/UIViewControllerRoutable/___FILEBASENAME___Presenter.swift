@@ -11,12 +11,19 @@ import Foundation
 final class ___VARIABLE_ModuleName___Presenter {
     
     // MARK: - Public Variable
-    
-    weak var view: PresenterToView___VARIABLE_ModuleName___Protocol?
-    var router: PresenterToRouter___VARIABLE_ModuleName___Protocol!
-    
+        
     // MARK: - Private Variable
     
+    private weak var view: PresenterToView___VARIABLE_ModuleName___Protocol?
+    private let router: PresenterToRouter___VARIABLE_ModuleName___Protocol
+    
+    // MARK: - Lifecycle
+    
+    init(view: PresenterToView___VARIABLE_ModuleName___Protocol,
+         router: PresenterToRouter___VARIABLE_ModuleName___Protocol) {
+        self.view = view
+        self.router = router
+    }
 }
 
 // MARK: - ViewToPresenter

@@ -12,9 +12,22 @@ final class SubmitChangesPresenter {
     
     // MARK: - Public Variable
     
-    weak var view: PresenterToViewSubmitChangesProtocol?
-    var router: PresenterToRouterSubmitChangesProtocol!
     var movies: [UpcomingMovieViewModel] = []
+    
+    // MARK: - Private Variable
+    
+    private weak var view: PresenterToViewSubmitChangesProtocol?
+    private let router: PresenterToRouterSubmitChangesProtocol
+    
+    // MARK: - Lifecycle
+    
+    init(view: PresenterToViewSubmitChangesProtocol,
+         router: PresenterToRouterSubmitChangesProtocol,
+         movies: [UpcomingMovieViewModel]) {
+        self.view = view
+        self.router = router
+        self.movies = movies
+    }
 }
 
 // MARK: - ViewToPresenter

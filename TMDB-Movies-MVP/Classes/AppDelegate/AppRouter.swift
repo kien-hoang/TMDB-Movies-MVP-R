@@ -24,16 +24,8 @@ final class AppRouter {
 
 extension AppRouter {
     func showAsRootView() {
-        let viewController = UpcomingMoviesViewController.initViewController()
-        let presenter = UpcomingMoviesPresenter()
-        let router = UpcomingMoviesRouter(view: viewController)
-        
-        viewController.presenter = presenter
-        
-        presenter.view = viewController
-        presenter.router = router
-        
-        window.rootViewController = UINavigationController(rootViewController: viewController)
+        let vc = UpcomingMoviesBuilder.build()
+        window.rootViewController = UINavigationController(rootViewController: vc)
         window.makeKeyAndVisible()
     }
 }

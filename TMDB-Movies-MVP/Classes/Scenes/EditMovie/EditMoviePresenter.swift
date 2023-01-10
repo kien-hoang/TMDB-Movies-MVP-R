@@ -17,20 +17,24 @@ final class EditMoviePresenter {
         static let pointMax = 10.0
     }
     
-    // MARK: - Public Variable
-    
-    weak var view: PresenterToViewEditMovieProtocol?
-    var router: PresenterToRouterEditMovieProtocol!
-    weak var delegate: EditMoviePresenterDelegate?
-    
     // MARK: - Private Variable
     
+    private weak var view: PresenterToViewEditMovieProtocol?
+    private let router: PresenterToRouterEditMovieProtocol
+    
     private var viewModel: UpcomingMovieViewModel
+    private weak var delegate: EditMoviePresenterDelegate?
     
     // MARK: - Lifecycle
     
-    init(viewModel: UpcomingMovieViewModel) {
+    init(view: PresenterToViewEditMovieProtocol,
+         router: PresenterToRouterEditMovieProtocol,
+         viewModel: UpcomingMovieViewModel,
+         delegate: EditMoviePresenterDelegate) {
+        self.view = view
+        self.router = router
         self.viewModel = viewModel
+        self.delegate = delegate
     }
 }
 

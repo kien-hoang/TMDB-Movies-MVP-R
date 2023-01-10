@@ -12,16 +12,21 @@ final class ___VARIABLE_ModuleName___Presenter {
     
     // MARK: - Public Variable
     
-    weak var view: PresenterToView___VARIABLE_ModuleName___Protocol?
-    
     // MARK: - Private Variable
     
+    private weak var view: PresenterToView___VARIABLE_ModuleName___Protocol?
+    
+    // MARK: - Lifecycle
+    
+    init(view: PresenterToView___VARIABLE_ModuleName___Protocol) {
+        self.view = view
+    }
 }
 
 // MARK: - ViewToPresenter
 
 extension ___VARIABLE_ModuleName___Presenter: ViewToPresenter___VARIABLE_ModuleName___Protocol {
-
+    
 }
 
 // MARK: - Private

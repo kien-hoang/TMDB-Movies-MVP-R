@@ -11,16 +11,25 @@ final class UpcomingMoviesPresenter {
     
     // MARK: - Public Variable
     
-    weak var view: PresenterToViewUpcomingMoviesProtocol?
-    var router: PresenterToRouterUpcomingMoviesProtocol!
     var movieViewModels: [UpcomingMovieViewModel] = []
     
     // MARK: - Private Variable
+    
+    private weak var view: PresenterToViewUpcomingMoviesProtocol?
+    private let router: PresenterToRouterUpcomingMoviesProtocol
     
     private let waitingToStartGroup = DispatchGroup()
     private var movies: [MovieModel] = []
     private var config: TMDBConfigurationModel?
     private var page = 1
+    
+    // MARK: - Lifecycle
+    
+    init(view: PresenterToViewUpcomingMoviesProtocol,
+         router: PresenterToRouterUpcomingMoviesProtocol) {
+        self.view = view
+        self.router = router
+    }
 }
 
 // MARK: - ViewToPresenter

@@ -15,30 +15,8 @@ final class UpcomingMoviesRouter {
     
     // MARK: - Lifecycle
     
-    init(view: UIViewController?) {
+    init(view: UIViewController) {
         self.view = view
-    }
-}
-
-// MARK: - Public
-
-extension UpcomingMoviesRouter {
-    func show() {
-        let vc = createModule()
-        view?.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func showAsRootView() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-              let window = appDelegate.window else { return }
-        
-        let vc = createModule()
-        UIView.transition(with: window,
-                          duration: 0.5, options: .transitionFlipFromRight) {
-            window.rootViewController = UINavigationController(rootViewController: vc)
-            
-        }
-        window.makeKeyAndVisible()
     }
 }
 
@@ -47,26 +25,14 @@ extension UpcomingMoviesRouter {
 extension UpcomingMoviesRouter: PresenterToRouterUpcomingMoviesProtocol {
     func navigateToEditMovie(with viewModel: UpcomingMovieViewModel,
                              delegate: EditMoviePresenterDelegate) {
-        EditMovieRouter(view: view).show(with: viewModel, delegate: delegate)
+        let vc = EditMovieBuilder.build(with: viewModel, delegate: delegate)
+        view?.navigationController?.pushViewController(vc, animated: true)
     }
     
     func navigateToSubmitChangesPopup(with viewModels: [UpcomingMovieViewModel]) {
-        SubmitChangesRouter(view: view).show(with: viewModels)
-    }
-}
-
-// MARK: - Private
-
-private extension UpcomingMoviesRouter {
-    func createModule() -> UIViewController {
-        let viewController = UpcomingMoviesViewController.initViewController()
-        let presenter = UpcomingMoviesPresenter()
-        
-        viewController.presenter = presenter
-        
-        presenter.view = viewController
-        presenter.router = self
-        
-        return viewController
+        let vc = SubmitChangesBuilder.build(with: viewModels)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        view?.present(vc, animated: true)
     }
 }
